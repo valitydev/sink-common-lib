@@ -1,2 +1,4 @@
-# eventsink-common-lib
-Библиотека с общими классами для взаимодействия с процессинговыми событиями eventsink/sinkievent  из дамзеля и машингана
+# thrift-common-lib
+Библиотека для переиспользования вздаимодействия с протоколами, обрабатываемые machinegun'ном:
+- eventsink (hellgate)
+- sinkievent (machinegun)
