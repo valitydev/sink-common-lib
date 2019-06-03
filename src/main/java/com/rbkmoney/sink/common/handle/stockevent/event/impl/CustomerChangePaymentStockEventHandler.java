@@ -21,7 +21,8 @@ public class CustomerChangePaymentStockEventHandler implements PaymentEventHandl
 
     @Override
     public void handle(Event payload, StockEvent baseEvent) {
-        for (CustomerChange change : payload.getPayload().getCustomerChanges()) {
+        for (int i = 0; i < payload.getPayload().getCustomerChanges().size(); i++) {
+            CustomerChange change = payload.getPayload().getCustomerChanges().get(i);
             for (CustomerChangeEventHandler eventHandler : eventHandlers) {
                 if (eventHandler.accept(change)) {
                     eventHandler.handle(change, baseEvent);

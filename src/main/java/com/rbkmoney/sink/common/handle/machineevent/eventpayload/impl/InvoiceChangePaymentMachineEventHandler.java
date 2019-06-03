@@ -21,7 +21,8 @@ public class InvoiceChangePaymentMachineEventHandler implements PaymentEventHand
 
     @Override
     public void handle(EventPayload payload, MachineEvent baseEvent) {
-        for (InvoiceChange change : payload.getInvoiceChanges()) {
+        for (int i = 0; i < payload.getInvoiceChanges().size(); i++) {
+            InvoiceChange change = payload.getInvoiceChanges().get(i);
             for (InvoiceChangeEventHandler eventHandler : eventHandlers) {
                 if (eventHandler.accept(change)) {
                     eventHandler.handle(change, baseEvent);

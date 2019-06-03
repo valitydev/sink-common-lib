@@ -21,7 +21,8 @@ public class PayoutChangePayoutStockEventHandler implements PayoutEventHandler {
 
     @Override
     public void handle(Event payload, StockEvent baseEvent) {
-        for (PayoutChange change : payload.getPayload().getPayoutChanges()) {
+        for (int i = 0; i < payload.getPayload().getPayoutChanges().size(); i++) {
+            PayoutChange change = payload.getPayload().getPayoutChanges().get(i);
             for (PayoutChangeEventHandler eventHandler : eventHandlers) {
                 if (eventHandler.accept(change)) {
                     eventHandler.handle(change, baseEvent);

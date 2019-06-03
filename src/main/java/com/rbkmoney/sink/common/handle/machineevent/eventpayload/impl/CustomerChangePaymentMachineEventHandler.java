@@ -23,7 +23,8 @@ public class CustomerChangePaymentMachineEventHandler implements PaymentEventHan
 
     @Override
     public void handle(EventPayload payload, MachineEvent baseEvent) {
-        for (CustomerChange change : payload.getCustomerChanges()) {
+        for (int i = 0; i < payload.getCustomerChanges().size(); i++) {
+            CustomerChange change = payload.getCustomerChanges().get(i);
             for (CustomerChangeEventHandler eventHandler : eventHandlers) {
                 if (eventHandler.accept(change)) {
                     eventHandler.handle(change, baseEvent);

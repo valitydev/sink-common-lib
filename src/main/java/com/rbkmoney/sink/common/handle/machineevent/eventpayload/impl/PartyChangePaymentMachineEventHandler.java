@@ -21,7 +21,8 @@ public class PartyChangePaymentMachineEventHandler implements PaymentEventHandle
 
     @Override
     public void handle(EventPayload payload, MachineEvent baseEvent) {
-        for (PartyChange change : payload.getPartyChanges()) {
+        for (int i = 0; i < payload.getPartyChanges().size(); i++) {
+            PartyChange change = payload.getPartyChanges().get(i);
             for (PartyChangeEventHandler eventHandler : eventHandlers) {
                 if (eventHandler.accept(change)) {
                     eventHandler.handle(change, baseEvent);
