@@ -1,5 +1,5 @@
 #!groovy
-build('thrift-common-lib', 'docker-host') {
+build('sink-common-lib', 'docker-host') {
     checkoutRepo()
     loadBuildUtils()
 
