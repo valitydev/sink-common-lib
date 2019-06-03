@@ -27,7 +27,7 @@ public class CustomerChangePaymentMachineEventHandler implements PaymentEventHan
             CustomerChange change = payload.getCustomerChanges().get(i);
             for (CustomerChangeEventHandler eventHandler : eventHandlers) {
                 if (eventHandler.accept(change)) {
-                    eventHandler.handle(change, baseEvent);
+                    eventHandler.handle(change, baseEvent, i);
                 }
             }
         }

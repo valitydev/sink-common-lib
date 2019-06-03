@@ -25,7 +25,7 @@ public class PartyChangePaymentMachineEventHandler implements PaymentEventHandle
             PartyChange change = payload.getPartyChanges().get(i);
             for (PartyChangeEventHandler eventHandler : eventHandlers) {
                 if (eventHandler.accept(change)) {
-                    eventHandler.handle(change, baseEvent);
+                    eventHandler.handle(change, baseEvent, i);
                 }
             }
         }

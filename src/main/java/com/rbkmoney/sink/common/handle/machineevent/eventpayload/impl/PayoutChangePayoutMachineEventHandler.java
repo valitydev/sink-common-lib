@@ -25,7 +25,7 @@ public class PayoutChangePayoutMachineEventHandler implements PayoutEventHandler
             PayoutChange change = payload.getPayoutChanges().get(i);
             for (PayoutChangeEventHandler eventHandler : eventHandlers) {
                 if (eventHandler.accept(change)) {
-                    eventHandler.handle(change, baseEvent);
+                    eventHandler.handle(change, baseEvent, i);
                 }
             }
         }

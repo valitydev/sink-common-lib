@@ -25,7 +25,7 @@ public class CustomerChangePaymentStockEventHandler implements PaymentEventHandl
             CustomerChange change = payload.getPayload().getCustomerChanges().get(i);
             for (CustomerChangeEventHandler eventHandler : eventHandlers) {
                 if (eventHandler.accept(change)) {
-                    eventHandler.handle(change, baseEvent);
+                    eventHandler.handle(change, baseEvent, i);
                 }
             }
         }

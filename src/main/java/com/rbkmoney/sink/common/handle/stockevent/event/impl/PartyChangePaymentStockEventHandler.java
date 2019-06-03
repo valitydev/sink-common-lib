@@ -25,7 +25,7 @@ public class PartyChangePaymentStockEventHandler implements PaymentEventHandler 
             PartyChange change = payload.getPayload().getPartyChanges().get(i);
             for (PartyChangeEventHandler eventHandler : eventHandlers) {
                 if (eventHandler.accept(change)) {
-                    eventHandler.handle(change, baseEvent);
+                    eventHandler.handle(change, baseEvent, i);
                 }
             }
         }
