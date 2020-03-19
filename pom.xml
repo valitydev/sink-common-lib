@@ -24,7 +24,7 @@
         <damsel.version>1.278-3abdcb4</damsel.version>
         <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
         <woody.thrift.version>1.1.15</woody.thrift.version>
-        <damsel.version>1.291-02be09e</damsel.version>
+        <damsel.version>1.391-8fe5f98</damsel.version>
         <machinegun-proto.version>1.12-ebae56f</machinegun-proto.version>
     </properties>
 
