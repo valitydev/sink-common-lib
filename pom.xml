@@ -11,7 +11,7 @@
     </parent>
 
     <artifactId>sink-common-lib</artifactId>
-    <version>0.0.5</version>
+    <version>0.0.6</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -20,6 +20,9 @@
         <java.version>8</java.version>
         <lombok.version>1.18.4</lombok.version>
         <kafka.clients.version>2.1.0</kafka.clients.version>
+        <random-beans.version>[3.7.0,)</random-beans.version>
+        <slf4j-api.version>1.7.30</slf4j-api.version>
+        <junit.version>4.12</junit.version>
         <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
         <woody.version>[1.1.21,)</woody.version>
         <damsel.version>1.439-b18f037</damsel.version>
@@ -31,7 +34,7 @@
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>1.7.25</version>
+                <version>${slf4j-api.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -65,13 +68,13 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>io.github.benas</groupId>
             <artifactId>random-beans</artifactId>
-            <version>[3.7.0,)</version>
+            <version>${random-beans.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
