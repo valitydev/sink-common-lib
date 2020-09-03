@@ -19,8 +19,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>8</java.version>
         <lombok.version>1.18.4</lombok.version>
-        <kafka.clients.version>2.1.0</kafka.clients.version>
-        <random-beans.version>[3.7.0,)</random-beans.version>
+        <random-beans.version>[3.9.0,)</random-beans.version>
         <slf4j-api.version>1.7.30</slf4j-api.version>
         <junit.version>4.12</junit.version>
         <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
