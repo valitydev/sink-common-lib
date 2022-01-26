@@ -21,7 +21,7 @@
         <lombok.version>1.18.4</lombok.version>
         <random-beans.version>[3.9.0,)</random-beans.version>
         <slf4j-api.version>1.7.30</slf4j-api.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
         <woody.version>[1.1.21,)</woody.version>
         <damsel.version>1.439-b18f037</damsel.version>
