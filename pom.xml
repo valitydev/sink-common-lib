@@ -4,28 +4,27 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.rbkmoney</groupId>
-        <artifactId>parent</artifactId>
-        <version>1.0.5</version>
-        <relativePath/>
+        <groupId>dev.vality</groupId>
+        <artifactId>library-parent-pom</artifactId>
+        <version>1.0.2</version>
     </parent>
 
     <artifactId>sink-common-lib</artifactId>
-    <version>0.0.8</version>
+    <version>0.0.1</version>
     <packaging>jar</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>8</java.version>
-        <lombok.version>1.18.4</lombok.version>
-        <random-beans.version>[3.9.0,)</random-beans.version>
+        <java.version>15</java.version>
+        <lombok.version>1.18.22</lombok.version>
+        <random-beans.version>3.9.0</random-beans.version>
         <slf4j-api.version>1.7.30</slf4j-api.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.2</junit.version>
         <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
-        <woody.version>[1.1.21,)</woody.version>
-        <damsel.version>1.439-b18f037</damsel.version>
-        <machinegun-proto.version>1.18-d814d69</machinegun-proto.version>
+        <woody.version>1.0.4</woody.version>
+        <damsel.version>1.544-dcd92dd</damsel.version>
+        <machinegun-proto.version>1.21-e4784ab</machinegun-proto.version>
     </properties>
 
     <dependencyManagement>
@@ -45,20 +44,20 @@
             <version>${lombok.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.rbkmoney.woody</groupId>
+            <groupId>dev.vality.woody</groupId>
             <artifactId>woody-thrift</artifactId>
             <version>${woody.version}</version>
         </dependency>
 
-        <!-- rbk -->
+        <!-- Vality -->
         <dependency>
-            <groupId>com.rbkmoney</groupId>
+            <groupId>dev.vality</groupId>
             <artifactId>damsel</artifactId>
             <version>${damsel.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.rbkmoney</groupId>
+            <groupId>dev.vality</groupId>
             <artifactId>machinegun-proto</artifactId>
             <version>${machinegun-proto.version}</version>
         </dependency>
@@ -83,7 +82,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.2</version>
+                <version>0.8.7</version>
                 <configuration>
                     <destFile>${sonar.jacoco.reportPath}</destFile>
                     <append>true</append>
