@@ -6,11 +6,11 @@
     <parent>
         <groupId>dev.vality</groupId>
         <artifactId>library-parent-pom</artifactId>
-        <version>1.0.2</version>
+        <version>1.0.3</version>
     </parent>
 
     <artifactId>sink-common-lib</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <packaging>jar</packaging>
 
     <properties>
