@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>sink-common-lib</artifactId>
-    <version>0.0.1</version>
+    <version>0.1.0</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -19,7 +19,7 @@
         <java.version>15</java.version>
         <lombok.version>1.18.22</lombok.version>
         <random-beans.version>3.9.0</random-beans.version>
-        <slf4j-api.version>1.7.30</slf4j-api.version>
+        <slf4j-api.version>2.0.11</slf4j-api.version>
         <junit.version>4.13.2</junit.version>
         <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
         <woody.version>1.0.4</woody.version>
