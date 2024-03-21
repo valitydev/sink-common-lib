@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>sink-common-lib</artifactId>
-    <version>0.0.1</version>
+    <version>0.1.0</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -22,7 +22,7 @@
         <slf4j-api.version>1.7.30</slf4j-api.version>
         <junit.version>4.13.2</junit.version>
         <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
-        <woody.version>1.0.4</woody.version>
+        <woody.version>2.0.0</woody.version>
         <damsel.version>1.544-dcd92dd</damsel.version>
         <machinegun-proto.version>1.21-e4784ab</machinegun-proto.version>
     </properties>
